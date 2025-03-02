@@ -80,6 +80,7 @@ body {
   display: flex;
   align-items: center;
   font-family: 'Minecraftia', monospace;
+  text-shadow: 0 0 2px lime, 0 0 5px lime;
 }
 
 #command-input {
