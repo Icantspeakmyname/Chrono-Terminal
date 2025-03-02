@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 consoleOutput.innerHTML += '- Available commands: server, storage, memory, source, info<br>';
                 break;
             case 'server':
-                consoleOutput.innerHTML += '- IP: ???. Version: ?.??.?<br>';
+                consoleOutput.innerHTML += '- IP: 89.35.130.15:25037. Version: 1.21.x<br>';
                 break;
             case 'storage':
                 consoleOutput.innerHTML += '- The storage location is safe, since the memory is already predefined and cannot be changed, it is already a pre-prescribed future, stored in memory, and the memory is buried in the storage location.<br>';
