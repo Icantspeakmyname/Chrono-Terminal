@@ -3,14 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const consoleOutput = document.getElementById('console-output');
     const commandInput = document.getElementById('command-input');
 
-    // Воспроизведение фонового звука
     backgroundSound.play();
 
-    // Приветственное сообщение
     consoleOutput.innerHTML += 'Chrono Terminal [Version 0.20.3.2.02.5]<br>';
     consoleOutput.innerHTML += '(c) 2025 All rights reserved.<br><br>';
 
-    // Обработка ввода команд
     commandInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             const command = commandInput.value.trim();
@@ -20,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Функция обработки команд
     function handleCommand(command) {
         switch (command) {
             case 'help':
