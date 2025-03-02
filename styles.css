@@ -1,9 +1,7 @@
-/* Подключение шрифта Minecraftia */
 body {
   font-family: 'Minecraftia', monospace;
 }
 
-/* Основные стили */
 body {
   background-color: black;
   color: lime;
@@ -13,7 +11,6 @@ body {
   position: relative;
 }
 
-/* VHS-эффект на задний фон */
 #vhs-overlay {
   position: fixed;
   top: 0;
@@ -32,14 +29,12 @@ body {
   animation: vhs-flicker 0.1s infinite;
 }
 
-/* Эффект мерцания */
 @keyframes vhs-flicker {
   0% { opacity: 0.8; }
   50% { opacity: 1; }
   100% { opacity: 0.8; }
 }
 
-/* Эффект scanlines (горизонтальные линии) */
 #scanlines {
   position: fixed;
   top: 0;
@@ -62,7 +57,6 @@ body {
   100% { transform: translateY(-4px); }
 }
 
-/* Консоль */
 #console-screen {
   position: relative;
   z-index: 3;
@@ -77,7 +71,7 @@ body {
   font-family: 'Minecraftia', monospace;
   line-height: 1.2;
   letter-spacing: 1px;
-  text-shadow: 0 0 2px lime, 0 0 5px lime; /* Эффект свечения текста */
+  text-shadow: 0 0 2px lime, 0 0 5px lime;
 }
 
 #console-input {
@@ -99,10 +93,9 @@ body {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 1px;
-  text-shadow: 0 0 2px lime, 0 0 5px lime; /* Эффект свечения текста */
+  text-shadow: 0 0 2px lime, 0 0 5px lime;
 }
 
-/* Мигающий эффект текста */
 @keyframes flicker {
   0% { opacity: 1; }
   50% { opacity: 0.8; }
