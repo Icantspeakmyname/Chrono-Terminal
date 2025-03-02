@@ -1,0 +1,114 @@
+/* Подключение шрифта Minecraftia */
+body {
+  font-family: 'Minecraftia', monospace;
+}
+
+/* Основные стили */
+body {
+  background-color: black;
+  color: lime;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* VHS-эффект на задний фон */
+#vhs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 0, 0.1),
+      rgba(0, 255, 0, 0.1) 1px,
+      transparent 1px,
+      transparent 3px
+  );
+  pointer-events: none;
+  z-index: 1;
+  animation: vhs-flicker 0.1s infinite;
+}
+
+/* Эффект мерцания */
+@keyframes vhs-flicker {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+/* Эффект scanlines (горизонтальные линии) */
+#scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.1) 2px,
+      rgba(0, 255, 0, 0.1) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+  animation: scanlines 0.5s infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+/* Консоль */
+#console-screen {
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+}
+
+#console-output {
+  height: 80vh;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: 'Minecraftia', monospace;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px lime, 0 0 5px lime; /* Эффект свечения текста */
+}
+
+#console-input {
+  padding: 0;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  font-family: 'Minecraftia', monospace;
+}
+
+#command-input {
+  flex-grow: 1;
+  margin-left: 5px;
+  background-color: transparent;
+  color: lime;
+  border: none;
+  outline: none;
+  font-family: 'Minecraftia', monospace;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-shadow: 0 0 2px lime, 0 0 5px lime; /* Эффект свечения текста */
+}
+
+/* Мигающий эффект текста */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+body {
+  animation: flicker 0.1s infinite;
+}
