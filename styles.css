@@ -71,7 +71,7 @@ body {
   font-family: 'Minecraftia', monospace;
   line-height: 1.2;
   letter-spacing: 1px;
-  text-shadow: 0 0 2px lime, 0 0 5px lime;
+  text-shadow: 0 0 2px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
 }
 
 #console-input {
