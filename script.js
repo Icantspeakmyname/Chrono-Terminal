@@ -2,29 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const backgroundSound = document.getElementById('background-sound');
     const consoleOutput = document.getElementById('console-output');
     const commandInput = document.getElementById('command-input');
-    
+    const fadeOut = document.getElementById('fade-out');
+
     backgroundSound.play();
-    
+
     consoleOutput.innerHTML += '<span class="title">Chrono Terminal [Version 0.20.3.2.02.5]</span><br>';
     consoleOutput.innerHTML += '<span class="info">(c) 2025 All rights reserved.</span><br><br>';
-    
+
     let commandHistory = JSON.parse(localStorage.getItem('commandHistory')) || [];
     let historyIndex = commandHistory.length;
 
     commandInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
-            const command = commandInput.value.trim();
+            const command = commandInput.value.trim().toLowerCase();
             commandInput.value = '';
 
-            if (command === "exit") {
-                consoleOutput.innerHTML += '<span class="error">Working</span><br>';
-                fadeOut.style.visibility = "visible";
-                fadeOut.style.opacity = "1";
-                
-                setTimeout(() => {
-                    window.location.href = "https://google.com";
-                }, 1500)
-            }
+            consoleOutput.innerHTML += `<span class="input">M:\\User\\storage> ${command}</span><br>`;
 
             if (command) {
                 commandHistory.push(command);
@@ -32,13 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 historyIndex = commandHistory.length;
             }
 
-            consoleOutput.innerHTML += `<span class="input">M:\\User\\storage> ${command}</span><br>`;
-            handleCommand(command);
-        } else if (e.key === 'ArrowUp') {
-            if (historyIndex > 0) {
-                historyIndex--;
-                commandInput.value = commandHistory[historyIndex];
+            if (command === "exit") {
+                consoleOutput.innerHTML += '<span class="error">Working</span><br>';
+                fadeOut.style.visibility = "visible";
+                fadeOut.style.opacity = "1";
+
+                setTimeout(() => {
+                    window.location.href = "https://google.com";
+                }, 1500);
+                return;
             }
+
+            handleCommand(command);
+        } else if (e.key === 'ArrowUp' && historyIndex > 0) {
+            historyIndex--;
+            commandInput.value = commandHistory[historyIndex];
         } else if (e.key === 'ArrowDown') {
             if (historyIndex < commandHistory.length - 1) {
                 historyIndex++;
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleCommand(command) {
         setTimeout(() => {
             let output = '';
-            switch (command.toLowerCase()) {
+            switch (command) {
                 case 'help':
                     output = '- Available commands: <span class="command">server</span>, <span class="command">storage</span>, <span class="command">memory</span>, <span class="command">source</span>, <span class="command">info</span>, <span class="command">exit</span><br>';
                     break;
