@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 consoleOutput.innerHTML += <span class="input">Working</span>
                 fadeOut.style.visibility = "visible";
                 fadeOut.style.opacity = "1";
+                
                 setTimeout(() => {
                     window.location.href = "https://google.com";
                 }, 1500)
