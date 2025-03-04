@@ -4,12 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const commandInput = document.getElementById('command-input');
     
     backgroundSound.play();
-    backgroundSound.volume = 1.0;
-    
-    <audio id="background-sound" loop>
-    <source src="assets/music/background.mp3" type="audio/mpeg">
-    </audio>
-
     
     consoleOutput.innerHTML += '<span class="title">Chrono Terminal [Version 0.20.3.2.02.5]</span><br>';
     consoleOutput.innerHTML += '<span class="info">(c) 2025 All rights reserved.</span><br><br>';
