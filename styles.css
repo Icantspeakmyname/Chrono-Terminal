@@ -11,6 +11,18 @@ body {
   position: relative;
 }
 
+#fade-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+}
+
 #vhs-overlay {
   position: fixed;
   top: 0;
