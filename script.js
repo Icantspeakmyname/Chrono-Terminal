@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'info':
                 consoleOutput.innerHTML += '- The server is the embodiment of these three connections. It allows everyone to observe this and output a chronological sequence that is already predefined.<br>';
                 break;
+            case 'security'
+                consoleOutput.innerHTML += '- You found it...MTUtMjEgMjAtMTYtNC01LTEgMTctMTgtMTAtMy02LTIwLTE5LTIwLTMtMjEtMzIgLCAyMC0yOSA5LTE1LTEtMTMgMjUtMjAtMTYgcCMjIyMgMTktMTYtMi0xMC0xOC0xLTYtMjAtMTktMzMgMy02LTE4LTE1LTIxLTIwLTMwLTE5LTMzPw==.<br>';
             default:
                 consoleOutput.innerHTML += '- Unknown command. Type "help" for available commands.<br>';
                 break;
