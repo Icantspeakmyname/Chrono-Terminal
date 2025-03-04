@@ -65,6 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'security':
                     output = '-<span class="hidden">MTUtMjEgMjAtMTYtNC01LTEg...</span><br>';
                     break;
+                case '???':
+                    output = '- cw==<br>';
+                    break;
                 default:
                     output = '- <span class="error">Unknown command.</span> Type "<span class="command">help</span>" for available commands.<br>';
                     break;
