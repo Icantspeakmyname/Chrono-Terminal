@@ -2,47 +2,75 @@ document.addEventListener('DOMContentLoaded', function() {
     const backgroundSound = document.getElementById('background-sound');
     const consoleOutput = document.getElementById('console-output');
     const commandInput = document.getElementById('command-input');
-
+    
     backgroundSound.play();
+    
+    consoleOutput.innerHTML += '<span class="title">Chrono Terminal [Version 0.20.3.2.02.5]</span><br>';
+    consoleOutput.innerHTML += '<span class="info">(c) 2025 All rights reserved.</span><br><br>';
+    
+    let commandHistory = JSON.parse(localStorage.getItem('commandHistory')) || [];
+    let historyIndex = commandHistory.length;
 
-    consoleOutput.innerHTML += 'Chrono Terminal [Version 0.20.3.2.02.5]<br>';
-    consoleOutput.innerHTML += '(c) 2025 All rights reserved.<br><br>';
-
-    commandInput.addEventListener('keypress', function(e) {
+    commandInput.addEventListener('keydown', function(e) {
         if (e.key === 'Enter') {
             const command = commandInput.value.trim();
             commandInput.value = '';
-            consoleOutput.innerHTML += `M:\\User\\storage> ${command}<br>`;
+
+            if (command) {
+                commandHistory.push(command);
+                localStorage.setItem('commandHistory', JSON.stringify(commandHistory));
+                historyIndex = commandHistory.length;
+            }
+
+            consoleOutput.innerHTML += `<span class="input">M:\\User\\storage> ${command}</span><br>`;
             handleCommand(command);
+        } else if (e.key === 'ArrowUp') {
+            if (historyIndex > 0) {
+                historyIndex--;
+                commandInput.value = commandHistory[historyIndex];
+            }
+        } else if (e.key === 'ArrowDown') {
+            if (historyIndex < commandHistory.length - 1) {
+                historyIndex++;
+                commandInput.value = commandHistory[historyIndex];
+            } else {
+                historyIndex = commandHistory.length;
+                commandInput.value = '';
+            }
         }
     });
 
     function handleCommand(command) {
-        switch (command) {
-            case 'help':
-                consoleOutput.innerHTML += '- Available commands: server, storage, memory, source, info<br>';
-                break;
-            case 'server':
-                consoleOutput.innerHTML += '- IP: 89.35.130.15:25037. Version: 1.21.x<br>';
-                break;
-            case 'storage':
-                consoleOutput.innerHTML += '- The storage location is safe, since the memory is already predefined and cannot be changed, it is already a pre-prescribed future, stored in memory, and the memory is buried in the storage location.<br>';
-                break;
-            case 'memory':
-                consoleOutput.innerHTML += '- Memory is a vision of the future. It is archived and stored in a storage location. All the chronological events that are taking place or have already passed were predetermined, they knew about them.<br>';
-                break;
-            case 'source':
-                consoleOutput.innerHTML += '- The source is a conduit between Memory, the future, and storage, and communication cannot occur without it.<br>';
-                break;
-            case 'info':
-                consoleOutput.innerHTML += '- The server is the embodiment of these three connections. It allows everyone to observe this and output a chronological sequence that is already predefined.<br>';
-                break;
-            case 'security':
-                consoleOutput.innerHTML += '- You found it...MTUtMjEgMjAtMTYtNC01LTEgMTctMTgtMTAtMy02LTIwLTE5LTIwLTMtMjEtMzIgLCAyMC0yOSA5LTE1LTEtMTMgMjUtMjAtMTYgcCMjIyMgMTktMTYtMi0xMC0xOC0xLTYtMjAtMTktMzMgMy02LTE4LTE1LTIxLTIwLTMwLTE5LTMzPw==.<br>';
-                break;
-            default:
-                consoleOutput.innerHTML += '- Unknown command. Type "help" for available commands.<br>';
-                break;
-        }
+        setTimeout(() => {
+            let output = '';
+            switch (command.toLowerCase()) {
+                case 'help':
+                    output = '- Available commands: <span class="command">server</span>, <span class="command">storage</span>, <span class="command">memory</span>, <span class="command">source</span>, <span class="command">info</span><br>';
+                    break;
+                case 'server':
+                    output = '- <span class="server">IP: 89.35.130.15:25037. Version: 1.21.x</span><br>';
+                    break;
+                case 'storage':
+                    output = '- The storage location is safe...<br>';
+                    break;
+                case 'memory':
+                    output = '- Memory is a vision of the future...<br>';
+                    break;
+                case 'source':
+                    output = '- The source is a conduit between Memory...<br>';
+                    break;
+                case 'info':
+                    output = '- The server is the embodiment of these three connections...<br>';
+                    break;
+                case 'security':
+                    output = '-<span class="hidden">MTUtMjEgMjAtMTYtNC01LTEg...</span><br>';
+                    break;
+                default:
+                    output = '- <span class="error">Unknown command.</span> Type "<span class="command">help</span>" for available commands.<br>';
+                    break;
+            }
+            consoleOutput.innerHTML += output;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }, 500);
     }
 });
