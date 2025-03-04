@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'security'
                 consoleOutput.innerHTML += '- You found it...MTUtMjEgMjAtMTYtNC01LTEgMTctMTgtMTAtMy02LTIwLTE5LTIwLTMtMjEtMzIgLCAyMC0yOSA5LTE1LTEtMTMgMjUtMjAtMTYgcCMjIyMgMTktMTYtMi0xMC0xOC0xLTYtMjAtMTktMzMgMy02LTE4LTE1LTIxLTIwLTMwLTE5LTMzPw==.<br>';
+                break;
             default:
                 consoleOutput.innerHTML += '- Unknown command. Type "help" for available commands.<br>';
                 break;
