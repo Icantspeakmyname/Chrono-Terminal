@@ -87,7 +87,9 @@ body {
   flex-grow: 1;
   margin-left: 5px;
   background-color: transparent;
-  color: lime;
+  color: lime; 
+  font-weight: 
+  bold;
   border: none;
   outline: none;
   font-family: 'Minecraftia', monospace;
