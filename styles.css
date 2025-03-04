@@ -20,7 +20,7 @@ body {
     background: black;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+    transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
 }
 
 #vhs-overlay {
