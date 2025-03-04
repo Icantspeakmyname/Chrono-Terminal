@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let output = '';
             switch (command.toLowerCase()) {
                 case 'help':
-                    output = '- Available commands: <span class="command">server</span>, <span class="command">storage</span>, <span class="command">memory</span>, <span class="command">source</span>, <span class="command">info</span><br>';
+                    output = '- Available commands: <span class="command">server</span>, <span class="command">storage</span>, <span class="command">memory</span>, <span class="command">source</span>, <span class="command">info</span>, <span class="command">exit</span><br>';
                     break;
                 case 'server':
                     output = '- <span class="server">IP: 89.35.130.15:25037. Version: 1.21.x</span><br>';
