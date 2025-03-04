@@ -111,7 +111,7 @@ body {
 body {
 .title { color: gray; }
 .info { color: gray; }
-.input { color: white; }
+.input { color: lime; font-weight: bold; }
 .command { color: lime; font-weight: bold; }
 .server { color: yellow; }
 .error { color: red; }
