@@ -1,12 +1,14 @@
 body {
   font-family: sans-serif;
+}
+
+body {
   background-color: black;
   color: gray;
   margin: 0;
   padding: 0;
   overflow: hidden;
   position: relative;
-  animation: flicker 0.1s infinite;
 }
 
 #fade-out {
@@ -98,8 +100,9 @@ body {
   flex-grow: 1;
   margin-left: 5px;
   background-color: transparent;
-  color: gray;
-  font-weight: bold;
+  color: gray; 
+  font-weight: 
+  bold;
   border: none;
   outline: none;
   font-family: sans-serif;
@@ -115,6 +118,10 @@ body {
   100% { opacity: 1; }
 }
 
+body {
+  animation: flicker 0.1s infinite;
+}
+.body {
 .title { color: gray; }
 .info { color: gray; }
 .input { color: gray; font-weight: bold; }
@@ -122,3 +129,4 @@ body {
 .server { color: gray; }
 .error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
 .hidden { color: darkred; user-select: none; }
+}
