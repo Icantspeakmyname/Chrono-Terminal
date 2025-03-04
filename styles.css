@@ -106,3 +106,12 @@ body {
 body {
   animation: flicker 0.1s infinite;
 }
+body {
+.title { color: cyan; font-weight: bold; }
+.info { color: gray; }
+.input { color: white; }
+.command { color: lime; font-weight: bold; }
+.server { color: yellow; }
+.error { color: red; }
+.hidden { color: darkred; user-select: none; }
+}
