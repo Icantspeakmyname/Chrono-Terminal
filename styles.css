@@ -76,6 +76,7 @@ body {
 
 #console-input {
   padding: 0;
+  color: gray;
   top: -10px;
   display: flex;
   align-items: center;
@@ -108,7 +109,7 @@ body {
 body {
   animation: flicker 0.1s infinite;
 }
-body {
+.body {
 .title { color: gray; }
 .info { color: gray; }
 .input { color: gray; font-weight: bold; }
