@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             commandInput.value = '';
 
             if (command === "exit") {
-                consoleOutput.innerHTML += <span class="error">Working</span>
+                consoleOutput.innerHTML += '<span class="error">Working</span><br>';
                 fadeOut.style.visibility = "visible";
                 fadeOut.style.opacity = "1";
                 
