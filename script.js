@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const command = commandInput.value.trim();
             commandInput.value = '';
 
+            if (command === "exit") {
+                window.location.href = "https://google.com";
+            }
+
             if (command) {
                 commandHistory.push(command);
                 localStorage.setItem('commandHistory', JSON.stringify(commandHistory));
