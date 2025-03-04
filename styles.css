@@ -109,7 +109,7 @@ body {
   animation: flicker 0.1s infinite;
 }
 body {
-.title { color: lime; font-weight: bold; }
+.title { color: gray; }
 .info { color: gray; }
 .input { color: white; }
 .command { color: lime; font-weight: bold; }
