@@ -115,6 +115,6 @@ body {
 .input { color: gray; font-weight: bold; }
 .command { color: gray; font-weight: bold; }
 .server { color: gray; }
-.error { color: red; }
+.error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
 .hidden { color: darkred; user-select: none; }
 }
