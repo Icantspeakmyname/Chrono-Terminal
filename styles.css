@@ -111,9 +111,9 @@ body {
 body {
 .title { color: gray; }
 .info { color: gray; }
-.input { color: lime; font-weight: bold; }
-.command { color: lime; font-weight: bold; }
-.server { color: yellow; }
+.input { color: gray; font-weight: bold; }
+.command { color: gray; font-weight: bold; }
+.server { color: gray; }
 .error { color: red; }
 .hidden { color: darkred; user-select: none; }
 }
