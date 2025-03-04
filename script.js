@@ -23,7 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
             commandInput.value = '';
 
             if (command === "exit") {
-                window.location.href = "https://google.com";
+                fadeOut.style.visibility = "visible";
+                fadeOut.style.opacity = "1";
+                setTimeout(() => {
+                    window.location.href = "https://google.com";
+                }, 1500)
             }
 
             if (command) {
