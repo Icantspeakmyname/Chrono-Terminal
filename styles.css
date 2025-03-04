@@ -1,26 +1,24 @@
 body {
   font-family: sans-serif;
-}
-
-body {
   background-color: black;
   color: gray;
   margin: 0;
   padding: 0;
   overflow: hidden;
   position: relative;
+  animation: flicker 0.1s infinite;
 }
 
 #fade-out {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
 }
 
 #vhs-overlay {
@@ -30,11 +28,11 @@ body {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 255, 0, 0.1),
-      rgba(0, 255, 0, 0.1) 1px,
-      transparent 1px,
-      transparent 3px
+    0deg,
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 255, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 3px
   );
   pointer-events: none;
   z-index: 1;
@@ -54,10 +52,10 @@ body {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
-      transparent,
-      transparent 2px,
-      rgba(0, 255, 0, 0.1) 2px,
-      rgba(0, 255, 0, 0.1) 4px
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.1) 2px,
+    rgba(0, 255, 0, 0.1) 4px
   );
   pointer-events: none;
   z-index: 2;
@@ -101,8 +99,7 @@ body {
   margin-left: 5px;
   background-color: transparent;
   color: gray; 
-  font-weight: 
-  bold;
+  font-weight: bold;
   border: none;
   outline: none;
   font-family: sans-serif;
@@ -118,15 +115,10 @@ body {
   100% { opacity: 1; }
 }
 
-body {
-  animation: flicker 0.1s infinite;
-}
-.body {
-.title { color: gray; }
-.info { color: gray; }
-.input { color: gray; font-weight: bold; }
-.command { color: gray; font-weight: bold; }
-.server { color: gray; }
-.error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
-.hidden { color: darkred; user-select: none; }
-}
+.body .title { color: gray; }
+.body .info { color: gray; }
+.body .input { color: gray; font-weight: bold; }
+.body .command { color: gray; font-weight: bold; }
+.body .server { color: gray; }
+.body .error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
+.body .hidden { color: darkred; user-select: none; }
