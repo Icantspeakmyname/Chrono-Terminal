@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'info':
                     output = '- The server is the embodiment of these three connections...<br>';
                     break;
-                case 'location'
+                case 'location':
                     output = 'null'
                     break;
                 case 'security':
