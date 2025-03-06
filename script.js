@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (command === "exit") {
-                consoleOutput.innerHTML += '<span class="error">Working</span><br>';
+                consoleOutput.innerHTML += '<span class="error">Working...</span><br>';
                 fadeOut.style.visibility = "visible";
                 fadeOut.style.opacity = "1";
 
@@ -62,22 +62,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     output = '- <span class="server">IP: 89.35.130.15:25037. Version: 1.21.x</span><br>';
                     break;
                 case 'storage':
-                    output = '- The storage location is safe...<br>';
+                    output = '- The storage location is safe.<br>';
                     break;
                 case 'memory':
-                    output = '- Memory is a vision of the future...<br>';
+                    output = '- Memory is a vision of the future.<br>';
                     break;
                 case 'source':
-                    output = '- The source is a conduit between Memory...<br>';
+                    output = '- The source is a conduit between Memory.<br>';
                     break;
                 case 'info':
-                    output = '- The server is the embodiment of these three connections...<br>';
+                    output = '- The server is the embodiment of these three connections.<br>';
                     break;
                 case 'location':
                     output = '- null';
                     break;
                 case 'security':
-                    output = '-<span class="hidden">MTUtMjEgMjAtMTYtNC01LTEg...</span><br>';
+                    output = '-<span class="hidden">MTUtMjEgMjAtMTYtNC01LTEg</span><br>';
                     break;
                 case '???':
                     output = '- cw==<br>';
