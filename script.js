@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     output = '- Available commands: <span class="command">server</span>, <span class="command">storage</span>, <span class="command">memory</span>, <span class="command">source</span>, <span class="command">info</span>, <span class="command">exit</span><br>';
                     break;
                 case 'server':
-                    output = '- <span class="server">IP: 89.35.130.15:25037. Version: 1.21.x</span><br>';
+                    output = '- <span class="server">IP: 89.35.130.15:25012. Version: 1.21.x</span><br>';
                     break;
                 case 'storage':
                     output = '- The storage location is safe.<br>';
