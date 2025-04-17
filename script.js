@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const commandInput = document.getElementById('command-input');
     const fadeOut = document.getElementById('fade-out');
     const toggle = document.getElementById("sound-toggle");
-
-toggle.addEventListener("change", () => {
-    hum.muted = !toggle.checked;
-
-
     backgroundSound.play();
 
     consoleOutput.innerHTML += '<span class="title">Chrono Terminal [Version 0.20.3.2.02.5]</span><br>';
