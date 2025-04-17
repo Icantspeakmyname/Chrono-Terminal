@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const consoleOutput = document.getElementById('console-output');
     const commandInput = document.getElementById('command-input');
     const fadeOut = document.getElementById('fade-out');
+    const toggle = document.getElementById("sound-toggle");
+
+toggle.addEventListener("change", () => {
+    hum.muted = !toggle.checked;
+
 
     backgroundSound.play();
 
