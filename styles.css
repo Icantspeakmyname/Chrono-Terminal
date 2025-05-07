@@ -115,10 +115,10 @@ body {
   100% { opacity: 1; }
 }
 
-.body .title { color: gray; }
-.body .info { color: gray; }
-.body .input { color: gray; font-weight: bold; }
-.body .command { color: gray; font-weight: bold; }
-.body .server { color: gray; }
-.body .error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
-.body .hidden { color: darkred; user-select: none; }
+.title { color: gray; }
+.info { color: gray; }
+.input { color: gray; font-weight: bold; }
+.command { color: gray; font-weight: bold; }
+.server { color: gray; }
+.error { color: red; text-shadow: 0 0 2px red, 0 0 5px red; }
+.hidden { color: darkred; user-select: none; }
